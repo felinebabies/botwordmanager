@@ -30,3 +30,16 @@
             - answerval.each do |word|
               %li
                 = h word
+
+#changeset.Dictionary
+  %h2
+    おむつ交換への反応
+
+  - @words['changeset'].each do |key, value|
+    .Section
+      %h2
+        = key
+      %ul
+        - value.each do |word|
+          %li
+            = h word
