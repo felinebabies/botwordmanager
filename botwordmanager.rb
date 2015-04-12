@@ -10,6 +10,10 @@ Bundler.require
 class BotWordManager < Sinatra::Base
   register Sinatra::Reloader
 
+  helpers do
+    include Rack::Utils
+    alias_method :h, :escape_html
+  end
   wordsfile = "wordfile.yml"
   WORDDATA = YAML.load_file(wordsfile)
 

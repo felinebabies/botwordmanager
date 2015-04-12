@@ -1,5 +1,14 @@
 %h1
   ピート君bot 会話パターン表示サイト
 
-%pre
-  = PP.pp @words, ''
+%h2
+  自発的発言
+
+- @words['autonomous'].each do |key, value|
+  .Section
+    %h2
+      = key
+    %ul
+      - value.each do |word|
+        %li
+          = h word

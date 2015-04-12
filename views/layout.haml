@@ -2,7 +2,6 @@
 %html
   %head
     %title
-      = @pagetitle | "Bot word manager"
+      = @pagetitle || "Bot word manager"
   %body
     = yield
-    
